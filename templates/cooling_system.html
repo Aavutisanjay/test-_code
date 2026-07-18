@@ -1,0 +1,129 @@
+High-performance cooling components designed to regulate engine temperature, improve efficiency, and prevent overheating.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooling System | Automotive Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            Automotive Store
+        </a>
+    </div>
+</nav>
+<!-- Heading -->
+<section class="container my-5 text-center">
+    <h1 class="fw-bold">
+        Cooling System
+    </h1>
+    <p class="text-muted">
+     High-performance cooling components designed to regulate engine temperature,
+     improve efficiency,and prevent overheating.
+    </p>
+</section>
+<!-- Home Button -->
+<div class="container text-center mb-4">
+    <a href="/"
+       class="btn btn-outline-dark">
+       ← Home
+    </a>
+</div>
+<!-- Products -->
+<section class="container mb-5">
+    <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/cooling_system/aluminum_radiator.jpg') }}"
+                     class="card-img-top"
+                     alt="Aluminum Radiator">
+                <div class="card-body">
+                    <h4>Aluminum Radiator</h4>
+                    <p>
+                     High-efficiency aluminum radiator designed for optimal heat dissipation.
+                     Helps maintain engine temperature and improves cooling performance
+                    </p> 
+                    <h5 class="text-success fw-bold">
+                        ₹6,999
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/cooling_system/coolent_tank.jpg') }}"
+                     class="card-img-top"
+                     alt="Coolent Tank">
+                <div class="card-body">
+                    <h4>Coolent Tank</h4>
+                    <p>
+                    Heat-resistant coolant reservoir that stores excess
+                    coolant and maintains proper coolant circulation during engine operation.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹1,499
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/cooling_system/radiator_fan.jpg') }}"
+                     class="card-img-top"
+                     alt="Radiator Fan">
+                <div class="card-body">
+                    <h4>Radiator Fan</h4>
+                    <p>
+                    High-speed electric cooling fan that increases airflow through the radiator. 
+                    Helps prevent engine overheating in traffic conditions.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹2,999
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/cooling_system/water_pump.jpg') }}"
+                     class="card-img-top"
+                     alt="Water Pump">
+                <div class="card-body">
+                    <h4>Water Pump</h4>
+                    <p>
+                    Heavy-duty water pump designed to circulate coolant efficiently throughout the engine.
+                    Ensures consistent cooling and long service life.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹3,999
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

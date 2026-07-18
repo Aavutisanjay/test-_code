@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Accessories | Automotive Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            Automotive Store
+        </a>
+    </div>
+</nav>
+<!-- Heading -->
+<section class="container my-5 text-center">
+    <h1 class="fw-bold">
+        Interior Accessories
+    </h1>
+    <p class="text-muted">
+      Better quality Interior accessories designed to enhance comfort, convenience, style, and driving experience inside your vehicle.  
+    </p>
+</section>
+<!-- Home Button -->
+<div class="container text-center mb-4">
+    <a href="/"
+       class="btn btn-outline-dark">
+       ← Home
+    </a>
+</div>
+<!-- Products -->
+<section class="container mb-5">
+    <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/interior_accessories/seat_cover.jpg') }}"
+                     class="card-img-top"
+                     alt="Seat Cover Set">
+                <div class="card-body">
+                    <h4>Seat Cover Set</h4>
+                    <p>
+                      Premium leatherette seat cover set offering enhanced comfort,
+                      wear resistance,and a stylish cabin appearance.
+                      Easy to clean and maintain.
+                    </p> 
+                    <h5 class="text-success fw-bold">
+                        ₹2,999
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/interior_accessories/floor_mat.jpg') }}"
+                     class="card-img-top"
+                     alt="Floor Mat Set">
+                <div class="card-body">
+                    <h4>Floor Mat Set</h4>
+                    <p>
+                    Heavy-duty anti-slip floor mats designed to protect the vehicle floor from dirt,
+                    water,and daily wear while ensuring easy cleaning.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹1,999
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/interior_accessories/steeringwheel_cover.jpg') }}"
+                     class="card-img-top"
+                     alt="Steering Wheel Cover">
+                <div class="card-body">
+                    <h4>Steering Wheel Cover</h4>
+                    <p>
+                    Soft-grip steering wheel cover providing improved handling,
+                    driving comfort,and protection against wear and tear.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹899
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/products/interior_accessories/mobile_holder.jpg') }}"
+                     class="card-img-top"
+                     alt="phone Holder">
+                <div class="card-body">
+                    <h4>Mobile Holder</h4>
+                    <p>
+                    Adjustable dashboard mobile holder with secure locking mechanism 
+                    for safe navigation and hands-free driving convenience.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                        ₹399
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

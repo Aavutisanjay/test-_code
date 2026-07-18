@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Parts | Automotive Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+        <a class="navbar-brand fw-bold"
+        href="/">
+        Automotive Store
+        </a>
+        </div>
+    </nav>
+    <!--Heading-->
+    <section class="container my-5 text-center">
+        <h1 class="fw-bold">
+            Electrical Parts
+        </h1>
+        <p class="text-muted">
+            Reliable electrical components for vehicle efficiency & performance.
+        </p>
+    </section>
+    <!--back button-->
+    <div class="container text-center mb-4">
+    <a href="/"
+    class="btn btn-outline-dark">
+    ← Home
+</a>
+    </div>
+    <!--Electrical Products-->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <!--product 1-->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{url_for('static',filename='images/products/electrical/car_battery.jpg')}}"
+                    class="card-img-top"
+                    alt="Car Battery">
+                    <div class="card-body">
+                        <h4>Car Battery</h4>
+                        <p>
+                        12V maintenance-free battery providing reliable engine starting
+                        & stable power supply.
+                        </p>
+                        <h5 class="text-success fw-bold">
+                        ₹4,999 
+                        </h5>
+                        <button class="btn btn-warning w-100">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Product 2-->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{url_for('static',filename='images/products/electrical/alternator.jpg')}}"
+                    class="card-img-top"
+                    alt="Alternator">
+                    <div class="card-body">
+                        <h4>Alternator</h4>
+                        <p>
+                        12V high-output alternator that charges the battery and powers
+                        vehicle electronics.    
+                        </p>
+                        <h5 class="text-success fw-bold">
+                        ₹5,499  
+                        </h5>
+                        <button class="btn btn-warning w-100">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Product 3-->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{url_for('static',filename='images/products/electrical/starter_motor.jpg')}}"
+                    class="card-img-top"
+                    alt="Starter Motor">
+                    <div class="card-body">
+                    <h4>Starter Motor</h4>
+                    <p>
+                    Heavy-duty 12V starter motor delivering strong cranking power
+                    for quick and reliable engine ignition.
+                    </p>
+                    <h5 class="text-success fw-bold">
+                     ₹3,999   
+                    </h5>
+                    <button class="btn btn-warning w-100">
+                        Add To Cart
+                    </button>
+                    </div>
+                </div>
+            </div>
+        <!--Product 4-->
+        <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <img src="{{url_for('static',filename='images/products/electrical/ignition_coil.jpg')}}"
+            class="card-img-top" 
+            alt="Ignition Coil">
+            <div class="card-body">
+                <h4>Ignition Coil</h4>
+                <p>
+                High-voltage coil pack that delivers strong spark energy
+                for efficient combustion in time.  
+                </p>
+                <h5 class="text-success fw-bold">
+                 ₹1,499   
+                </h5>
+                <button class="btn btn-warning w-100">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

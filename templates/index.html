@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Store</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            Automotive Store
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">
+                        Products
+                    </a>
+
+                <li class="nav-item">
+                    <a href="/cart" class="nav-link position-relative">
+                        <i class="bi bi-cart-fill fs-5"></i>
+                        <span class="position-absloute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{cart_count}}
+                        </span>
+                         <!--Cart-->
+                    </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">
+            Premium Automotive Parts &
+            Accessories
+        </h1>
+        <p class="lead mt-3">
+            From Engine to Wheels.
+            Everything Your Vehicle Needs.
+        </p>
+        <a href="#categories"
+           class="btn btn-warning btn-lg mt-3">
+            Explore Categories
+        </a>
+    </div>
+</section>
+<!-- Why Choose Us -->
+<section class="container my-5">
+    <h2 class="text-center mb-5">
+        Why Choose Us
+    </h2>
+    <div class="row text-center">
+        <div class="col-md">
+            <h3>🔧</h3>
+            <h5>Genuine Parts</h5>
+            <p>
+                High-quality automotive parts
+                for reliable performance.
+            </p>
+        </div>
+        <div class="col-md">
+            <h3>🚚</h3>
+            <h5>Fast Delivery</h5>
+            <p>
+                Quick and secure delivery
+                for your vehicle needs.
+            </p>
+        </div>
+        <div class="col-md">
+            <h3>💰</h3>
+            <h5>Best Prices</h5>
+            <p>
+                Affordable pricing without
+                compromising quality.
+            </p>
+        </div>
+        <div class="col-md">
+            <h3>🛡️</h3>
+            <h5>Quality Assured</h5>
+            <p>
+                Trusted products tested
+                for durability.
+            </p>
+        </div>
+        <div class="col-md">
+            <h3>📞</h3>
+            <h5>Customer Support</h5>
+            <p>
+                Friendly support whenever
+                you need assistance.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Shop By Category -->
+ <section id="categories" class="container my-5">
+    <h2 class="text-center mb-5"> 
+        Shop By Category
+    </h2>
+    <div class="row">
+        <!-- category 1 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/engine_parts.jpg') }}"
+                class="img-fluid"
+                alt="Engine part">
+                <div class="overlay">
+                    <h4>Engine Parts</h4>
+                    <a href="/engine-parts"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+  <!-- category 2 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/electrical_parts.jpg') }}"
+                class="img-fluid"
+                alt="Electrical part">
+                <div class="overlay">
+                    <h4>Electrical Parts</h4>
+                    <a href="/electrical_parts"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+<!-- category 3 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/brake_parts.jpg') }}"
+                class="img-fluid"
+                alt="Brake part">
+                <div class="overlay">
+                    <h4>Brake System</h4>
+                    <a href="/brake_system"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- category 4 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/suspension_parts.jpg') }}"
+                class="img-fluid"
+                alt="suspension part">
+                <div class="overlay">
+                    <h4>Suspension Parts</h4>
+                    <a href="suspension_parts"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 5 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/tyres_wheels.jpg') }}"
+                class="img-fluid"
+                alt="Tyres & wheels part">
+                <div class="overlay">
+                    <h4>Tyres & Wheels</h4>
+                    <a href="tyres&wheels"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 6 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/lightings.jpg') }}"
+                class="img-fluid"
+                alt="lighting parts">
+                <div class="overlay">
+                    <h4>Lighting</h4>
+                    <a href="lighting"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="row">
+        <!-- category 7 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/filters.jpg') }}"
+                class="img-fluid"
+                alt="filters part">
+                <div class="overlay">
+                    <h4>Filters</h4>
+                    <a href="filter"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 8 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/interior_accessories.jpg') }}"
+                class="img-fluid"
+                alt="interior accessories part">
+                <div class="overlay">
+                    <h4>Interior Accessories</h4>
+                    <a href="interior_accessories"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 9 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/exterior_accessories.jpg') }}"
+                class="img-fluid"
+                alt="exterior accessories">
+                <div class="overlay">
+                    <h4>Exterior Accessories</h4>
+                    <a href="exterior_accessories"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="row">
+        <!-- category 10 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/cooling_system.jpg') }}"
+                class="img-fluid"
+                alt="cooling system">
+                <div class="overlay">
+                    <h4>Cooling System</h4>
+                    <a href="cooling_system"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 11 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/exhaust_system.jpg') }}"
+                class="img-fluid"
+                alt="exhaust system">
+                <div class="overlay">
+                    <h4>Exhaust System</h4>
+                    <a href="exhaust_system"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+        <!-- category 12 -->
+         <div class="col-md-4 mb-4">
+            <div class="category-card">
+                <img src="{{ url_for('static',filename='images/safety_security.jpg') }}"
+                class="img-fluid"
+                alt="safety security">
+                <div class="overlay">
+                    <h4>Safety & Security</h4>
+                    <a href="safety_security"
+                    class="btn btn-warning">
+                 Explore
+                    </a>
+                </div>
+            </div>
+         </div>
+    </div>
+ </section>
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1 -->
+             <div class="col-md-3">
+                <h4>Automotive Store</h4>
+                <p>
+                    Premium automotive parts and 
+                    accessories for every vehicle,
+                    Quality products at the best prices.
+                </p>
+             </div>
+             <!-- Column 2 -->
+              <div class="col-md-3">
+                <h5> Quick Links </h5>
+                <ul class="footer-links">
+                    <li> <a href="/"> Home </a></li>
+                    <li> <a href="#categories"> Categories </a></li>
+                    <li> <a href="/products"> Products </a></li>
+                    <li> <a href="/Login"> Login </a></li>
+                </ul>
+              </div>
+              <!-- Column 3 -->
+               <div class="col-md-3">
+                <h5> Categories </h5>
+                <ul class="footer-links">
+                    <li> Engine Parts </li>
+                    <li> Brake System </li>
+                    <li> Tyres & Wheels </li>
+                    <li> Lighting </li>
+                </ul>
+               </div>
+               <!-- Column 4 -->
+                <div class="col-md-3">
+                    <h5> Contact </h5>
+                    <p> Email: support@automotivestore.com </p>
+                    <p> Phone: +91 970048 07949</p>
+                    <p> Location: India <p>
+                </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p>
+                @ 2026 Automotive Store.
+                All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
